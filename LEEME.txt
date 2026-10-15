@@ -1,0 +1,18 @@
+CAJITAS BEBÉ — INSTALACIÓN SIN CONEXIÓN
+
+Archivos:
+- index.html: juego
+- manifest.json: nombre/iconos de la aplicación web
+- sw.js: guarda los recursos para abrir sin internet
+- icon-*.png: iconos
+
+IMPORTANTE:
+Un HTML abierto desde Archivos no puede instalar por sí solo el service worker.
+Para que el modo sin conexión funcione en iPadOS 12.5.7:
+1. Publica TODOS estos archivos en un sitio HTTPS (por ejemplo GitHub Pages).
+2. En el iPad, abre la URL con Safari y espera a que cargue por completo.
+3. Abre la URL una segunda vez para que el service worker termine de instalarse.
+4. Pulsa Compartir > Añadir a pantalla de inicio.
+5. Abre el icono una vez con internet, después activa modo avión y prueba de nuevo.
+
+El juego no descarga imágenes ni sonidos: los sonidos son generados con Web Audio y los animales son emojis del sistema. Algunos emojis recientes pueden no existir en iOS 12 y podrían mostrarse como símbolo vacío.
